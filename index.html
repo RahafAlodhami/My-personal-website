@@ -6,13 +6,23 @@
     <title>Rahaf Alodhami</title>
     <link rel="shortcut icon" href="LOGO.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <script src="Java.js"></script>
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+       <script>
+           $(document).ready(function () {
+               var max_length = 900;
+               $('textarea').keyup(function () {
+                   var len = max_length - $(this).val().length;
+                   $('.GFG').text(len);
+               });
+
+           });
+       </script>
 </head>
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
 
     <nav class="navbar">
         <ul>
@@ -43,7 +53,7 @@
                 <div class="name">
                   <h2>I'm Rahaf Alodhami</h2>
                     <p>
-                    A self-driven, multitasking, flexible, detail-oriented, quick starter, with a good communication skills and a curious mind. Born in Al Ain on 1998 November 19th and raised in Saudi Arabia. I am an Information Management Grad Student at Imam Mohammad Ibn Saud Islamic University. Interested in Front End Development, UX Design ,Project Management, System Analysis and Photography. My computer skills are Java, Html, Microsoft office, SQL, CSS, R, PHP, JavaScript. My experiences are, I Volunteered in DSCA foundation, Also in Saudi digital family initiative. Took a knowledge management and innovation course, An information security course Also, a data science and analysis course. Attended a workshop for Artificial Intelligence cloud computing all industries in Saudi universities. Arabic is my mother language and I am fluent in English.</p>
+                    A self-driven, multitasking, flexible, detail-oriented, quick starter, with a good communication skills and a curious mind. Born in Al Ain on 1998 November 19th and raised in Saudi Arabia. I am an Information Management Grad Student at Imam Mohammad Ibn Saud Islamic University. Interested in Front End Development, UX Design, Project Management, System Analysis and Photography. My computer skills are Java, Html, Microsoft office, SQL, CSS, R, PHP, JavaScript. My experiences are, I Volunteered in DSCA foundation, Also in Saudi digital family initiative. Took a knowledge management and innovation course, An information security course Also, a data science and analysis course. Attended a workshop for Artificial Intelligence cloud computing all industries in Saudi universities. Arabic is my mother language and I am fluent in English.</p>
                 </div>
             </div>
         </section>
@@ -81,8 +91,10 @@
         <form action="" id="myform" onsubmit = "return validate();" class="form">
             <input id="name" type="text" name="name" class="input" placeholder="Enter Your Name" required>
             <input id="email" type="email" name="email" class="input" placeholder="Enter Your Email"required>
-            <textarea name="message" id="message" cols="70" rows="10" placeholder="Enter Your Message" maxlength="800"required></textarea>
-            <input type="submit" value="Submit" id="submit"> 
+            <p> <span class="GFG">900</span> Characters Remaining </p>
+            <textarea name="message" id="message" cols="70" rows="15" placeholder="Enter Your Message" maxlength="900"required></textarea>
+
+            <input type="submit" value="Submit" id="submit">
         </form>
 
     </section>
